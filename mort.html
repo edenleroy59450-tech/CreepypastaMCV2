@@ -5,6 +5,7 @@
     <title>Tu es mort</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <div class="container">
@@ -27,11 +28,59 @@
         Tu entends encore quelque chose t'appeler.
     </p>
 
-    <a href="warning.html">
-        Continuer
-    </a>
+    <button onclick="launchScreamer()">Continuer</button>
 
 </div>
+
+
+<!-- Ecran du screamer -->
+<div id="screamer" style="
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+justify-content:center;
+align-items:center;
+z-index:9999;
+">
+
+    <img src="screamer.jpg" style="
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    ">
+
+</div>
+
+
+<!-- Son du screamer -->
+<audio id="screamSound">
+    <source src="screamer.mp3" type="audio/mpeg">
+</audio>
+
+
+<script>
+
+function launchScreamer(){
+
+    // affiche l'image
+    document.getElementById("screamer").style.display="flex";
+
+    // joue le son
+    document.getElementById("screamSound").play();
+
+    // attend 3 secondes puis va page7
+    setTimeout(function(){
+        window.location.href="page7.html";
+    },3000);
+
+}
+
+</script>
+
 
 </body>
 </html>
