@@ -1,69 +1,54 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>N'avance pas</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+!DOCTYPE html
+html lang=fr
+head
+meta charset=UTF-8
+titleN'avance pastitle
+link rel=stylesheet href=style.css
+head
+body
 
-<body>
+div class=container
 
-<div class="container">
+h1 class=messageN'AVANCE PASh1
 
-    <h1 class="message">N'AVANCE PAS</h1>
+pTu peux encore revenir en arrière.p
 
-    <p>Tu peux encore revenir en arrière.</p>
+pNe clique pas.p
 
-    <p>Ne clique surtout pas sur ce bouton.</p>
+button onclick=launchScreamer()AVANCERbutton
 
-    <button onclick="launchScreamer()">
-        AVANCER
-    </button>
+div
 
-</div>
+div id=screamer style=
+displaynone;
+positionfixed;
+top0;
+left0;
+width100%;
+height100%;
+backgroundblack;
+justify-contentcenter;
+align-itemscenter;
+z-index9999;
 
-<div id="screamer" style="
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:black;
-justify-content:center;
-align-items:center;
-z-index:9999;
-">
+img src=screamer.jpg style=width100%;height100%;object-fitcover;
+div
 
-    <img src="screamer.jpg" style="
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    ">
+audio id=screamSound
+source src=screamer.mp3 type=audiompeg
+audio
 
-</div>
+script
+function launchScreamer(){
+    document.getElementById(screamer).style.display=flex;
 
-<audio id="screamSound">
-    <source src="screamer.mp3" type="audio/mpeg">
-</audio>
+    document.getElementById(screamSound).play();
 
-<script>
-
-function launchScreamer() {
-
-    document.getElementById("screamer").style.display = "flex";
-
-    document.getElementById("screamSound").play();
-
-    setTimeout(function() {
-
-        window.location.href = "page7.html";
-
-    }, 3000);
-
+    setTimeout(()={
+        window.location.href=page7.html;
+    },3000);
 }
+script
 
-</script>
-
-</body>
-</html>
+body
+html
