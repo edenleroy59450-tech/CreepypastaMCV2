@@ -6,83 +6,201 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        .personnage {
+
+        .demon {
             position: fixed;
-            right: -150px;
+            right: -250px;
             top: 50%;
             transform: translateY(-50%);
-            width: 100px;
-            height: 180px;
-            background: black;
-            border-radius: 50px 50px 20px 20px;
-            opacity: 0;
-            animation: apparition 3s forwards;
+            width: 130px;
+            height: 220px;
+            background: #8b0000;
+            border-radius: 70px 70px 30px 30px;
+            z-index: 20;
+            animation: demonMove 2.5s ease-in-out forwards;
+            box-shadow: 0 0 50px red;
         }
 
-        @keyframes apparition {
+
+        .head {
+            position: absolute;
+            top: -75px;
+            left: 15px;
+            width: 100px;
+            height: 100px;
+            background: #8b0000;
+            border-radius: 50%;
+        }
+
+
+        /* Cornes triangles */
+        .horn1 {
+            position: absolute;
+            top: -80px;
+            left: 5px;
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 70px solid #ff9900;
+            transform: rotate(-25deg);
+        }
+
+
+        .horn2 {
+            position: absolute;
+            top: -80px;
+            right: 5px;
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 70px solid #ff9900;
+            transform: rotate(25deg);
+        }
+
+
+        /* Yeux */
+        .eye1,
+        .eye2 {
+            position: absolute;
+            top: 40px;
+            width: 18px;
+            height: 30px;
+            background: #ffff00;
+            border-radius: 50%;
+            box-shadow: 0 0 20px yellow;
+        }
+
+
+        .eye1 {
+            left: 25px;
+        }
+
+
+        .eye2 {
+            right: 25px;
+        }
+
+
+        /* Bouche */
+        .mouth {
+            position: absolute;
+            bottom: 20px;
+            left: 30px;
+            width: 40px;
+            height: 12px;
+            background: black;
+        }
+
+
+        @keyframes demonMove {
 
             0% {
-                right: -150px;
+                right: -250px;
                 opacity: 0;
             }
 
             20% {
-                right: 20px;
+                right: 30px;
                 opacity: 1;
             }
 
-            70% {
-                right: 20px;
+            45% {
+                right: 30px;
                 opacity: 1;
             }
 
             100% {
-                right: -150px;
+                right: -250px;
                 opacity: 0;
             }
 
         }
+
+
     </style>
 
 </head>
 
+
 <body onload="visitPage('page10')">
 
-<div class="personnage"></div>
+
+<div class="demon">
+
+    <div class="head">
+
+        <div class="horn1"></div>
+        <div class="horn2"></div>
+
+        <div class="eye1"></div>
+        <div class="eye2"></div>
+
+        <div class="mouth"></div>
+
+    </div>
+
+</div>
+
 
 
 <div class="container">
 
+
     <h1>Jour 10</h1>
 
-    <p>
-        La porte de code s'ouvrit enfin.
-        Je pensais être arrivé au bout...
-    </p>
 
     <p>
-        Mais en entrant, j'ai aperçu quelque chose du coin de l'œil.
+        Le code venait enfin d'être accepté.
+        La porte devant moi s'ouvrit lentement.
     </p>
 
-    <p>
-        Une silhouette noire était apparue sur le côté de la pièce.
-    </p>
 
     <p>
-        Elle me regardait...
-        Puis, en une fraction de seconde, elle disparut dans l'obscurité.
+        Derrière elle se trouvait une salle que je n'avais
+        jamais vue auparavant.
+        Les murs semblaient corrompus par des lignes de code.
     </p>
 
+
     <p>
-        Je n'étais plus seul dans ce monde.
+        Je suis entré doucement...
+        puis une sensation étrange m'envahit.
     </p>
+
+
+    <p>
+        Quelque chose venait d'apparaître à côté de moi.
+    </p>
+
+
+    <p>
+        Une créature rouge avec des cornes orange me regardait.
+        Ses yeux brillaient dans le noir.
+    </p>
+
+
+    <p>
+        Je n'ai même pas eu le temps de reculer.
+        La créature a disparu instantanément dans l'obscurité.
+    </p>
+
+
+    <p>
+        Ce n'était pas un bug...
+        Quelqu'un ou quelque chose contrôlait ce monde.
+    </p>
+
 
     <a href="page11.html">Continuer</a>
+
 
 </div>
 
 
 <script src="script.js"></script>
+
 
 </body>
 </html>
