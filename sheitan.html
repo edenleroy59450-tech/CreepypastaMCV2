@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Le Sheitan</title>
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+
+        .container {
+            width: 70%;
+            margin: auto;
+            margin-top: 80px;
+        }
+
+        h1 {
+            font-size: 60px;
+        }
+
+        p {
+            font-size: 30px;
+            margin: 30px;
+        }
+
+        .message {
+            color: red;
+            font-size: 40px;
+        }
+
+        #mysteryButton {
+            margin-top: 50px;
+            padding: 20px 50px;
+            font-size: 35px;
+            background: black;
+            color: red;
+            border: 2px solid red;
+            cursor: pointer;
+        }
+
+        #mysteryButton:hover {
+            background: red;
+            color: black;
+        }
+
+        #screamer {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        #screamer img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>LE SHEITAN T'A TROUVÉ</h1>
+
+    <p>L'écran devient noir.</p>
+
+    <p>Tu entends des bruits de pas.</p>
+
+    <p>Puis un message apparaît :</p>
+
+    <p class="message">
+        "Tu es revenu cinq fois. Tu as ouvert la porte."
+    </p>
+
+    <p>
+        Une silhouette immense apparaît au loin,
+        avec des yeux rouges et un sourire impossible.
+    </p>
+
+    <p class="message">
+        "Je suis le Sheitan du vide.
+        Je suis dans chaque monde oublié."
+    </p>
+
+    <p>
+        En regardant derrière toi,
+        tu remarques que le bouton retour a disparu.
+    </p>
+
+    <p class="message">
+        "La prochaine fois que tu lanceras Minecraft,
+        regarde derrière le spawn."
+    </p>
+
+    <button id="mysteryButton" onclick="launchScreamer()">
+        ???
+    </button>
+
+</div>
+
+<div id="screamer">
+    <img src="screamer.jpg" alt="Screamer">
+</div>
+
+<audio id="screamSound">
+    <source src="screamer.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function launchScreamer() {
+
+    document.getElementById("screamer").style.display = "flex";
+
+    const sound = document.getElementById("screamSound");
+    sound.volume = 1;
+    sound.play();
+
+    localStorage.removeItem("sequence");
+
+    setTimeout(() => {
+        window.location.href = "index.html";
+    }, 3000);
+}
+</script>
+
+</body>
+</html>
