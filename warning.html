@@ -1,0 +1,54 @@
+!DOCTYPE html
+html lang=fr
+head
+meta charset=UTF-8
+titleN'avance pastitle
+link rel=stylesheet href=style.css
+head
+body
+
+div class=container
+
+h1 class=messageN'AVANCE PASh1
+
+pTu peux encore revenir en arrière.p
+
+pNe clique pas.p
+
+button onclick=launchScreamer()AVANCERbutton
+
+div
+
+div id=screamer style=
+displaynone;
+positionfixed;
+top0;
+left0;
+width100%;
+height100%;
+backgroundblack;
+justify-contentcenter;
+align-itemscenter;
+z-index9999;
+
+img src=screamer.jpg style=width100%;height100%;object-fitcover;
+div
+
+audio id=screamSound
+source src=screamer.mp3 type=audiompeg
+audio
+
+script
+function launchScreamer(){
+    document.getElementById(screamer).style.display=flex;
+
+    document.getElementById(screamSound).play();
+
+    setTimeout(()={
+        window.location.href=page7.html;
+    },3000);
+}
+script
+
+body
+html
