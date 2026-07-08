@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Jour 10</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .personnage {
+            position: fixed;
+            right: -150px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100px;
+            height: 180px;
+            background: black;
+            border-radius: 50px 50px 20px 20px;
+            opacity: 0;
+            animation: apparition 3s forwards;
+        }
+
+        @keyframes apparition {
+
+            0% {
+                right: -150px;
+                opacity: 0;
+            }
+
+            20% {
+                right: 20px;
+                opacity: 1;
+            }
+
+            70% {
+                right: 20px;
+                opacity: 1;
+            }
+
+            100% {
+                right: -150px;
+                opacity: 0;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body onload="visitPage('page10')">
+
+<div class="personnage"></div>
+
+
+<div class="container">
+
+    <h1>Jour 10</h1>
+
+    <p>
+        La porte de code s'ouvrit enfin.
+        Je pensais être arrivé au bout...
+    </p>
+
+    <p>
+        Mais en entrant, j'ai aperçu quelque chose du coin de l'œil.
+    </p>
+
+    <p>
+        Une silhouette noire était apparue sur le côté de la pièce.
+    </p>
+
+    <p>
+        Elle me regardait...
+        Puis, en une fraction de seconde, elle disparut dans l'obscurité.
+    </p>
+
+    <p>
+        Je n'étais plus seul dans ce monde.
+    </p>
+
+    <a href="page11.html">Continuer</a>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
