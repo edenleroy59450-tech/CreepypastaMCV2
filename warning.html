@@ -14,7 +14,7 @@
 
     <p>Tu peux encore revenir en arrière.</p>
 
-    <p>Ne clique pas.</p>
+    <p>Ne clique surtout pas sur ce bouton.</p>
 
     <button onclick="launchScreamer()">
         AVANCER
@@ -34,11 +34,13 @@ justify-content:center;
 align-items:center;
 z-index:9999;
 ">
+
     <img src="screamer.jpg" style="
     width:100%;
     height:100%;
     object-fit:cover;
     ">
+
 </div>
 
 <audio id="screamSound">
@@ -46,15 +48,21 @@ z-index:9999;
 </audio>
 
 <script>
+
 function launchScreamer() {
+
     document.getElementById("screamer").style.display = "flex";
 
     document.getElementById("screamSound").play();
 
-    setTimeout(() => {
+    setTimeout(function() {
+
         window.location.href = "page7.html";
+
     }, 3000);
+
 }
+
 </script>
 
 </body>
