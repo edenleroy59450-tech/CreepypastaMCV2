@@ -40,15 +40,30 @@
     </p>
 
     <p>
-        Je ne comprenais pas tout de suite ce que ces symboles voulaient dire.
-        Mais en les observant, je compris que le code cachait un indice.
+        Un dernier indice était caché dans ces symboles...
     </p>
 
-    <a href="page10.html">Continuer</a>
+    <input type="text" id="password" placeholder="Mot de passe">
+
+    <button onclick="checkPassword()">Valider</button>
+
+    <p id="message"></p>
 
 </div>
 
 <script src="script.js"></script>
+
+<script>
+function checkPassword() {
+    let password = document.getElementById("password").value;
+
+    if (password.toLowerCase() === "croissant") {
+        window.location.href = "page10.html";
+    } else {
+        document.getElementById("message").innerHTML = "Mot de passe incorrect...";
+    }
+}
+</script>
 
 </body>
 </html>
